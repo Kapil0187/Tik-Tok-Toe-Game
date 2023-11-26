@@ -1,0 +1,88 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popins','sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(backgroun.jpg);
+    background-size: cover;
+    position: center;
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    color: black;
+    position:absolute;
+    top: 3rem;
+    left: 50%;
+    transform:translateX(-50%);
+    background-color: rgba(255,255,255,1);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+
+.tic-tak-toc{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255,255,255,1);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+    padding: 2rem;
+}
+
+.box{
+    position: relative;
+    color: black;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.box3,.box6{
+    border-bottom: 2px solid black;
+}
+
+.box7,  .box8{
+    border-right: 2px solid black;
+}
+
+.btn{
+    color: black;
+    position:absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    background-color: rgba(255,255,255,1);
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0,255,0,0.3);
+}
